@@ -21,12 +21,22 @@ public class RPSCommand implements CommandExecutor {
 				
 				RPS cpuRps = randomEnum(RPS);
 				
-				if (gues == cpuGues) {
-					message.reply("Draw!");
-				} else if (gues == "rock" && cpuGues == "paper") {
-					message.reply("You lose! " + user.getName() + "! I chose " + cpuGues + "!");
-				} else if (gues == "rock" && cpuGues == "scissors") {
-					message.reply("You win! " +  user.getName() + "! ! chose " + cpuGues + "!");
+				if (rps == cpuRps) {
+					message.reply("Draw! I chose " + cpuRps + "!");
+				} else if (rps == ROCK && cpuRps == PAPER) {
+					message.reply("You lose! " + user.getName() + "! I chose " + cpuRps + "!");
+				} else if (rps == ROCK && cpuRps == SCISSORS) {
+					message.reply("You win! " +  user.getName() + "! ! chose " + cpuRps + "!");
+				} else if (rps = PAPER && cpuRps == SCISSORS) {
+					message.reply("You lose! " + user.getName() + "! I chose " + cpuRps + "!");
+				} else if (rps = PAPER && cpuRps == ROCK) {
+					message.reply("You win! " +  user.getName() + "! ! chose " + cpuRps + "!");
+				} else if (rps = SCISSORS && cpuRps == ROCK) {
+					message.reply("You lose! " + user.getName() + "! I chose " + cpuRps + "!");
+				} else if (rps = SCISSORS && cpuRps == PAPER) {
+					message.reply("You win! " +  user.getName() + "! ! chose " + cpuRps + "!");	
+				} else {
+					message.reply("Debug: Player gues = " + rps + " ,CPU Gues = " + cpuRps);
 				}
 				
 			} catch (IllegalArgumentException e) {
