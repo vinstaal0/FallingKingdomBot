@@ -53,6 +53,8 @@ public class Main {
 		cmdHandler.registerCommand(new GetRoleCommand());
 		cmdHandler.registerCommand(new RoleCommand());
 		cmdHandler.registerCommand(new PlayingCommand());
+		cmdHandler.registerCommand(new HelpCommand());
+		cmdHandler.registerCommand(new RPSCommand());
 				
 	}
 
