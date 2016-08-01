@@ -35,7 +35,7 @@ public class PlayingCommand implements CommandExecutor {
 			}
 		} catch (Exception e){
 			e.printStackTrace();
-			user.sendMessage("An error occured");
+			message.reply("An error occured");
 
 		}
 		
