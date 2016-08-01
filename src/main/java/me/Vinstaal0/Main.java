@@ -55,6 +55,8 @@ public class Main {
 		cmdHandler.registerCommand(new PlayingCommand());
 		cmdHandler.registerCommand(new HelpCommand());
 		cmdHandler.registerCommand(new RPSCommand());
+		cmdHandler.registerCommand(new RollCommand());
+		cmdHandler.registerCommand(new IsUnoMadYetCommand());
 				
 	}
 
