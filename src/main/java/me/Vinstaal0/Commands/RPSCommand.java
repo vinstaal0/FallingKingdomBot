@@ -7,7 +7,7 @@ import de.btobastian.sdcf4j.CommandExecutor;
 
 public class RPSCommand implements CommandExecutor {
 	
-	public enum RPS {"rock", "paper", "scicors"}
+	public enum RPS {ROCK, PAPER, SCICORS}
 	
 	@Command(aliases = {"!rps", "!rockpaperscicors"}, description = "Play rock paper scricors")
 	public String onCommand(Server server, User user, String command, String[] args) {
