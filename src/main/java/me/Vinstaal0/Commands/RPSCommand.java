@@ -10,10 +10,17 @@ public class RPSCommand implements CommandExecutor {
 	@Command(aliases = {"!rps", "!rockpaperscicors"}, description = "Play rock paper scricors")
 	public String onCommand(Server server, User user, String command, String[] args) {
 		
-		if (user.getRoles(server).contains(server.getRoleById("144529984088702978"))) {
-			return "Pong!";
+		Random rnd = new Random(3);
+		String gues;
+		
+		if (args.length == 0) {
+			message.reply("Invalid arguments");
+		} else if (args.length > 1) {
+			message.reply("Invalid arguments, max is 1");
+		} else {
+			gues = args[0];
 		}
-		return null;
+		
 		
 	}
 
