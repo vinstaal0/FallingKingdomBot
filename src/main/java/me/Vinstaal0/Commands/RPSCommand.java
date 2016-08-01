@@ -11,10 +11,6 @@ public class RPSCommand implements CommandExecutor {
 	@Command(aliases = {"!rps", "!rockpaperscissors"}, description = "Play rock paper scissors")
 	public String onCommand(Server server, User user, String command, String[] args) {
 		
-		Random rnd = new Random(3);
-		String gues;
-		String cpuGues;
-		
 		if (args.length == 0) {
 			message.reply("Invalid arguments");
 		} else if (args.length > 1) {
@@ -23,7 +19,7 @@ public class RPSCommand implements CommandExecutor {
 			try {
 				RPS rps = RPS.valueOf(args[0]);
 				
-				cpuGues = randomEnum(RPS);
+				RPS cpuRps = randomEnum(RPS);
 				
 				if (gues == cpuGues) {
 					message.reply("Draw!");
@@ -32,7 +28,7 @@ public class RPSCommand implements CommandExecutor {
 				} else if (gues == "rock" && cpuGues == "scissors") {
 					message.reply("You win! " +  user.getName() + "! ! chose " + cpuGues + "!");
 				}
-				You lose! @Vinstaal0! I guesed rock!
+				
 			} catch (IllegalArgumentException e) {
 				message.reply("Please enter rock, paper or scissors");
 			}
