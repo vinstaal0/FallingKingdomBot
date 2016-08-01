@@ -13,18 +13,21 @@ public class RPSCommand implements CommandExecutor {
 	public String onCommand(Server server, User user, String command, String[] args) {
 		
 		Random rnd = new Random(3);
-		RPS rps;
 		String gues;
 		
 		if (args.length == 0) {
 			message.reply("Invalid arguments");
 		} else if (args.length > 1) {
-			message.reply("Invalid arguments, max is 1");
+			message.reply("Invalid ämount of arguments, max is 1");
 		} else {
 			gues = args[0];
 		}
 		
-		
+		try {
+			RPS rps = RPS.valueOf(args[0]);
+		} catch {
+			message.reply("Please enther rock, paper or scissors");
+		}
 		
 	}
 
