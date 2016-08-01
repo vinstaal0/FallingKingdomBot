@@ -13,6 +13,7 @@ public class RPSCommand implements CommandExecutor {
 		
 		Random rnd = new Random(3);
 		String gues;
+		String cpuGues;
 		
 		if (args.length == 0) {
 			message.reply("Invalid arguments");
@@ -22,11 +23,20 @@ public class RPSCommand implements CommandExecutor {
 			try {
 				RPS rps = RPS.valueOf(args[0]);
 				
-				message.reply("Computer guesed: " + randomEnum(RPS));
+				cpuGues = randomEnum(RPS);
 				
+				if (gues == cpuGues) {
+					message.reply("Draw!");
+				} else if (gues == "rock" && cpuGues == "paper") {
+					message.reply("You lose! " + user.getName() + "! I chose " + cpuGues + "!");
+				} else if (gues == "rock" && cpuGues == "scissors") {
+					message.reply("You win! " +  user.getName() + "! ! chose " + cpuGues + "!");
+				}
+				You lose! @Vinstaal0! I guesed rock!
 			} catch (IllegalArgumentException e) {
-				message.reply("Please enter rock, paper or scrissors");
+				message.reply("Please enter rock, paper or scissors");
 			}
+			
 		}
 		
 	}
