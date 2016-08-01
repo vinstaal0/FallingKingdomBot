@@ -4,6 +4,7 @@ import de.btobastian.javacord.entities.Server;
 import de.btobastian.javacord.entities.User;
 import de.btobastian.sdcf4j.Command;
 import de.btobastian.sdcf4j.CommandExecutor;
+import me.Vinstaal0.Commands.Enums.*;
 
 public class RPSCommand implements CommandExecutor {
 	
@@ -20,6 +21,9 @@ public class RPSCommand implements CommandExecutor {
 		} else {
 			try {
 				RPS rps = RPS.valueOf(args[0]);
+				
+				message.reply("Computer guesed: " + randomEnum(RPS));
+				
 			} catch (IllegalArgumentException e) {
 				message.reply("Please enter rock, paper or scrissors");
 			}
