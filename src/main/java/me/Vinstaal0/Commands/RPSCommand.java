@@ -20,7 +20,11 @@ public class RPSCommand implements CommandExecutor {
 		} else if (args.length > 1) {
 			message.reply("Invalid ämount of arguments, max is 1");
 		} else {
-			gues = args[0];
+			try {
+				RPS rps = RPS.valueOf(args[0]);
+			} catch (IllegalArgumentException e) {
+				message.reply("Please enter rock, paper or scrissors");
+			}
 		}
 		
 		try {
