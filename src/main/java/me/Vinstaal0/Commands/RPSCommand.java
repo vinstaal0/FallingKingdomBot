@@ -26,7 +26,7 @@ public class RPSCommand implements CommandExecutor {
 		try {
 			RPS rps = RPS.valueOf(args[0]);
 		} catch (IllegalArgumentException e) {
-			message.reply("Please enther rock, paper or scissors");
+			message.reply("Please enter rock, paper or scissors");
 		}
 		
 	}
