@@ -1,5 +1,10 @@
 package me.Vinstaal0.Commands;
 
+import de.btobastian.javacord.entities.User;
+import de.btobastian.javacord.entities.message.Message;
+import de.btobastian.sdcf4j.Command;
+import de.btobastian.sdcf4j.CommandExecutor;
+
 public class HelpCommand implements CommandExecutor {
   
      @Command(aliases = {"!help"}, description = "Returns a list of commands")
