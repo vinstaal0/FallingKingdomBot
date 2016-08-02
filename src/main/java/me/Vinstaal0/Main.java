@@ -6,15 +6,7 @@ import de.btobastian.javacord.DiscordAPI;
 import de.btobastian.javacord.Javacord;
 import de.btobastian.sdcf4j.CommandHandler;
 import de.btobastian.sdcf4j.handler.JavacordHandler;
-import me.Vinstaal0.Commands.GetRoleCommand;
-import me.Vinstaal0.Commands.HelpCommand;
-import me.Vinstaal0.Commands.IsUnoMadYetCommand;
-import me.Vinstaal0.Commands.PingCommand;
-import me.Vinstaal0.Commands.PlayingCommand;
-import me.Vinstaal0.Commands.RPSCommand;
-import me.Vinstaal0.Commands.RoleCommand;
-import me.Vinstaal0.Commands.RollCommand;
-import me.Vinstaal0.Commands.ServerCommand;
+import me.Vinstaal0.Commands.*;
 import me.Vinstaal0.Listener.MessageListener;
 import me.Vinstaal0.Listener.ServerListener;
 
