@@ -17,7 +17,7 @@ public class Main {
 	public static DiscordAPI api;
 	
 	public static void main(String[] args) {
-		String token = "MjA0MTc3OTE0NDMyOTc4OTQ1.CoEPsw.8tkFqfMsveT-Mwqlzfj08jS7kik";
+		String token = "TOKEN";
 //		final String game = "Play.FallingKingdom.net";
 		
 		api = Javacord.getApi(token, true);
