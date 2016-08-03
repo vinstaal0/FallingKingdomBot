@@ -2,7 +2,7 @@ package me.Vinstaal0;
 
 public class ServerChoser {
   
-  public enum servers {
+  public enum _Server {
      FALLINGKINGDOM("131434184857092096"),
      VINSTAAL0DISCORD("109272327514005504"),
      REALMGUILD("209719487572738049")
@@ -12,16 +12,18 @@ public class ServerChoser {
      private servers(String id) {
           this.id = id;
        }
+    
+     
   }
   
-  public String getServerName(Server server) {
+  public _Servers getServerName(Server server) {
       
-      if (server.getId() == servers.FALLINGKINGDOM.getValue()) {
-         return servers.FALLINGKINGDOM.toString();
-      } else if (server.getId() == servers.VINSTAAL0DISCORD.getValue()) {
-         return servers.VINSTAAL0DISCORD.toString();
-      } else if (server.getId() == servers.REALMGUILD.getValue()) {
-         return servers.REALMGUILD.toString();
+      if (server.getId() == _servers.FALLINGKINGDOM.getValue()) {
+         return _servers.FALLINGKINGDOM;
+      } else if (server.getId() == _servers.VINSTAAL0DISCORD.getValue()) {
+         return _servers.VINSTAAL0DISCORD;
+      } else if (server.getId() == _servers.REALMGUILD.getValue()) {
+         return _servers.REALMGUILD;
       } else {
          return null;
       }
