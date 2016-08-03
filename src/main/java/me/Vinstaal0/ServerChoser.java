@@ -9,21 +9,24 @@ public class ServerChoser {
     
      private String id;
     
-     private servers(String id) {
+     private _Server(String id) {
           this.id = id;
        }
-    
+       
+     public String getId() {
+         return this.id;
+      }
      
   }
   
-  public _Servers getServerName(Server server) {
+  public _Server getServerName(Server server) {
       
-      if (server.getId() == _servers.FALLINGKINGDOM.getValue()) {
-         return _servers.FALLINGKINGDOM;
-      } else if (server.getId() == _servers.VINSTAAL0DISCORD.getValue()) {
-         return _servers.VINSTAAL0DISCORD;
-      } else if (server.getId() == _servers.REALMGUILD.getValue()) {
-         return _servers.REALMGUILD;
+      if (server.getId() == _Server.FALLINGKINGDOM.getId()) {
+         return _Server.FALLINGKINGDOM;
+      } else if (server.getId() == _Server.VINSTAAL0DISCORD.getId()) {
+         return _Server.VINSTAAL0DISCORD;
+      } else if (server.getId() == _Server.REALMGUILD.getId()) {
+         return _Server.REALMGUILD;
       } else {
          return null;
       }
@@ -31,7 +34,7 @@ public class ServerChoser {
   };
   
   public boolean isFallingKingdom(Server server) {
-      if (server.getId() == "131434184857092096") {
+      if (server.getId() == _Server.FALLINGKINGDOM.getId()) {
           return true;
       }   else {
           return false;
@@ -39,7 +42,7 @@ public class ServerChoser {
   }
   
   public boolean isVinstaal0Discord(Server server) {
-      if (server.getId() == "109272327514005504") {
+      if (server.getId() == _Server.VINSTAAL0DISCORD.getId()) {
           return true;
       }   else {
           return false;
@@ -47,7 +50,7 @@ public class ServerChoser {
   }
   
   public boolean isRealmGuild(Server server) {
-      if (server.getId() == "209719487572738049") {
+      if (server.getId() == _Server.REALMGUILD.getId()) {
           return true;
       }   else {
           return false;
