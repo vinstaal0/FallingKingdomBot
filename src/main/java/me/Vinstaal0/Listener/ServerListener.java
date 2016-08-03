@@ -9,7 +9,7 @@ public class ServerListener implements ServerMemberAddListener {
 
 	public void onServerMemberAdd(DiscordAPI api, User user, Server server) {
 		
-		server.getChannelById("#207175409572249601").sendMessage(user + " has joined the server!");
+		System.out.println(user + " has joined " + server.getName() + "!");
 		
 		server.getRoleById("143021185423245312").addUser(user);
 		
