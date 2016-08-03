@@ -6,8 +6,10 @@ import de.btobastian.sdcf4j.Command;
 import de.btobastian.sdcf4j.CommandExecutor;
 
 public class HelpCommand implements CommandExecutor {
+	
+	// use: https://github.com/BtoBastian/JavacordBot/blob/master/src/main/java/de/btobastian/javacordbot/commands/HelpCommand.java
   
-     @Command(aliases = {"!help"}, description = "Returns a list of commands")
+     @Command(aliases = {"!help", "!commands"}, description = "Shows this list")
 	  public void onCommand(Message message, User user, String[] args) {
 		    user.sendMessage("!getrole");
 		    user.sendMessage("!ping");
