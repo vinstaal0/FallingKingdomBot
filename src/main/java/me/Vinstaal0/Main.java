@@ -56,4 +56,44 @@ public class Main {
 				
 	}
 
+public static void onTradeConfirm(InventoryClickEvent event){
+            
+        if(event.getSlot() < 0){return;}
+        
+        int slot = event.getSlot(); 
+        
+        if (event.getClickedInventory().getItem(slot) == null){return;}  
+        
+        if (event.getClickedInventory().getName().contains("Vendor") &&  slot == 26  ){
+            
+        event.setCancelled(true);    
+        
+        soldItems = vendor.getContents();     
+        
+         for (ItemStack i : soldItems){                    
+             
+              if (i != null && functions.ifGear(i.getType().toString())){             
+                  
+                  int tier = functions.tierNumber(i);        
+                  
+                  if (tier == 0){rewards.add(items.T1Scrap);} 
+                  if (tier == 1){rewards.add(items.T2Scrap);}  
+                  if (tier == 2){rewards.add(items.T3Scrap);}  
+                  if (tier == 3){rewards.add(items.T4Scrap);}  
+                  if (tier == 4){rewards.add(items.T5Scrap);}                    
+                    
+              }         
+                 
+         }
+         
+        createVendor(); 
+                 
+        for (ItemStack i : rewards){player.getInventory().addItem(i);}
+        
+         rewards = new ArrayList<ItemStack>();
+        
+        } // slot
+        
+    }
+
 }
